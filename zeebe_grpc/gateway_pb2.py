@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='gateway_protocol',
   syntax='proto3',
   serialized_options=_b('\n\031io.zeebe.gateway.protocolP\000Z\002pb'),
-  serialized_pb=_b('\n\rgateway.proto\x12\x10gateway_protocol\"v\n\x13\x41\x63tivateJobsRequest\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0e\n\x06worker\x18\x02 \x01(\t\x12\x0f\n\x07timeout\x18\x03 \x01(\x03\x12\x19\n\x11maxJobsToActivate\x18\x04 \x01(\x05\x12\x15\n\rfetchVariable\x18\x05 \x03(\t\"D\n\x14\x41\x63tivateJobsResponse\x12,\n\x04jobs\x18\x01 \x03(\x0b\x32\x1e.gateway_protocol.ActivatedJob\"\xb8\x01\n\x0c\x41\x63tivatedJob\x12\x0b\n\x03key\x18\x01 \x01(\x03\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x30\n\njobHeaders\x18\x03 \x01(\x0b\x32\x1c.gateway_protocol.JobHeaders\x12\x15\n\rcustomHeaders\x18\x04 \x01(\t\x12\x0e\n\x06worker\x18\x05 \x01(\t\x12\x0f\n\x07retries\x18\x06 \x01(\x05\x12\x10\n\x08\x64\x65\x61\x64line\x18\x07 \x01(\x03\x12\x11\n\tvariables\x18\x08 \x01(\t\"\xa7\x01\n\nJobHeaders\x12\x1b\n\x13workflowInstanceKey\x18\x01 \x01(\x03\x12\x15\n\rbpmnProcessId\x18\x02 \x01(\t\x12!\n\x19workflowDefinitionVersion\x18\x03 \x01(\x05\x12\x13\n\x0bworkflowKey\x18\x04 \x01(\x03\x12\x11\n\telementId\x18\x05 \x01(\t\x12\x1a\n\x12\x65lementInstanceKey\x18\x06 \x01(\x03\"<\n\x1d\x43\x61ncelWorkflowInstanceRequest\x12\x1b\n\x13workflowInstanceKey\x18\x01 \x01(\x03\" \n\x1e\x43\x61ncelWorkflowInstanceResponse\"7\n\x12\x43ompleteJobRequest\x12\x0e\n\x06jobKey\x18\x01 \x01(\x03\x12\x11\n\tvariables\x18\x02 \x01(\t\"\x15\n\x13\x43ompleteJobResponse\"o\n\x1d\x43reateWorkflowInstanceRequest\x12\x13\n\x0bworkflowKey\x18\x01 \x01(\x03\x12\x15\n\rbpmnProcessId\x18\x02 \x01(\t\x12\x0f\n\x07version\x18\x03 \x01(\x05\x12\x11\n\tvariables\x18\x04 \x01(\t\"z\n\x1e\x43reateWorkflowInstanceResponse\x12\x13\n\x0bworkflowKey\x18\x01 \x01(\x03\x12\x15\n\rbpmnProcessId\x18\x02 \x01(\t\x12\x0f\n\x07version\x18\x03 \x01(\x05\x12\x1b\n\x13workflowInstanceKey\x18\x05 \x01(\x03\"S\n\x15\x44\x65ployWorkflowRequest\x12:\n\tworkflows\x18\x01 \x03(\x0b\x32\'.gateway_protocol.WorkflowRequestObject\"\xab\x01\n\x15WorkflowRequestObject\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x42\n\x04type\x18\x02 \x01(\x0e\x32\x34.gateway_protocol.WorkflowRequestObject.ResourceType\x12\x12\n\ndefinition\x18\x03 \x01(\x0c\",\n\x0cResourceType\x12\x08\n\x04\x46ILE\x10\x00\x12\x08\n\x04\x42PMN\x10\x01\x12\x08\n\x04YAML\x10\x02\"\\\n\x16\x44\x65ployWorkflowResponse\x12\x0b\n\x03key\x18\x01 \x01(\x03\x12\x35\n\tworkflows\x18\x02 \x03(\x0b\x32\".gateway_protocol.WorkflowMetadata\"e\n\x10WorkflowMetadata\x12\x15\n\rbpmnProcessId\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\x05\x12\x13\n\x0bworkflowKey\x18\x03 \x01(\x03\x12\x14\n\x0cresourceName\x18\x04 \x01(\t\"G\n\x0e\x46\x61ilJobRequest\x12\x0e\n\x06jobKey\x18\x01 \x01(\x03\x12\x0f\n\x07retries\x18\x02 \x01(\x05\x12\x14\n\x0c\x65rrorMessage\x18\x03 \x01(\t\"\x11\n\x0f\x46\x61ilJobResponse\"Q\n\x12GetWorkflowRequest\x12\x13\n\x0bworkflowKey\x18\x01 \x01(\x03\x12\x0f\n\x07version\x18\x02 \x01(\x05\x12\x15\n\rbpmnProcessId\x18\x03 \x01(\t\"y\n\x13GetWorkflowResponse\x12\x13\n\x0bworkflowKey\x18\x01 \x01(\x03\x12\x0f\n\x07version\x18\x02 \x01(\x05\x12\x15\n\rbpmnProcessId\x18\x03 \x01(\t\x12\x14\n\x0cresourceName\x18\x04 \x01(\t\x12\x0f\n\x07\x62pmnXml\x18\x05 \x01(\t\"-\n\x14ListWorkflowsRequest\x12\x15\n\rbpmnProcessId\x18\x01 \x01(\t\"N\n\x15ListWorkflowsResponse\x12\x35\n\tworkflows\x18\x01 \x03(\x0b\x32\".gateway_protocol.WorkflowMetadata\"w\n\x15PublishMessageRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x16\n\x0e\x63orrelationKey\x18\x02 \x01(\t\x12\x12\n\ntimeToLive\x18\x03 \x01(\x03\x12\x11\n\tmessageId\x18\x04 \x01(\t\x12\x11\n\tvariables\x18\x05 \x01(\t\"\x18\n\x16PublishMessageResponse\"-\n\x16ResolveIncidentRequest\x12\x13\n\x0bincidentKey\x18\x01 \x01(\x03\"\x19\n\x17ResolveIncidentResponse\"\x11\n\x0fTopologyRequest\"\x8a\x01\n\x10TopologyResponse\x12-\n\x07\x62rokers\x18\x01 \x03(\x0b\x32\x1c.gateway_protocol.BrokerInfo\x12\x13\n\x0b\x63lusterSize\x18\x02 \x01(\x05\x12\x17\n\x0fpartitionsCount\x18\x03 \x01(\x05\x12\x19\n\x11replicationFactor\x18\x04 \x01(\x05\"i\n\nBrokerInfo\x12\x0e\n\x06nodeId\x18\x01 \x01(\x05\x12\x0c\n\x04host\x18\x02 \x01(\t\x12\x0c\n\x04port\x18\x03 \x01(\x05\x12/\n\npartitions\x18\x04 \x03(\x0b\x32\x1b.gateway_protocol.Partition\"\x90\x01\n\tPartition\x12\x13\n\x0bpartitionId\x18\x01 \x01(\x05\x12=\n\x04role\x18\x03 \x01(\x0e\x32/.gateway_protocol.Partition.PartitionBrokerRole\"/\n\x13PartitionBrokerRole\x12\n\n\x06LEADER\x10\x00\x12\x0c\n\x08\x46OLLOWER\x10\x01\":\n\x17UpdateJobRetriesRequest\x12\x0e\n\x06jobKey\x18\x01 \x01(\x03\x12\x0f\n\x07retries\x18\x02 \x01(\x05\"\x1a\n\x18UpdateJobRetriesResponse\"S\n\x13SetVariablesRequest\x12\x1a\n\x12\x65lementInstanceKey\x18\x01 \x01(\x03\x12\x11\n\tvariables\x18\x02 \x01(\t\x12\r\n\x05local\x18\x03 \x01(\x08\"\x16\n\x14SetVariablesResponse2\xb7\n\n\x07Gateway\x12\x61\n\x0c\x41\x63tivateJobs\x12%.gateway_protocol.ActivateJobsRequest\x1a&.gateway_protocol.ActivateJobsResponse\"\x00\x30\x01\x12}\n\x16\x43\x61ncelWorkflowInstance\x12/.gateway_protocol.CancelWorkflowInstanceRequest\x1a\x30.gateway_protocol.CancelWorkflowInstanceResponse\"\x00\x12\\\n\x0b\x43ompleteJob\x12$.gateway_protocol.CompleteJobRequest\x1a%.gateway_protocol.CompleteJobResponse\"\x00\x12}\n\x16\x43reateWorkflowInstance\x12/.gateway_protocol.CreateWorkflowInstanceRequest\x1a\x30.gateway_protocol.CreateWorkflowInstanceResponse\"\x00\x12\x65\n\x0e\x44\x65ployWorkflow\x12\'.gateway_protocol.DeployWorkflowRequest\x1a(.gateway_protocol.DeployWorkflowResponse\"\x00\x12P\n\x07\x46\x61ilJob\x12 .gateway_protocol.FailJobRequest\x1a!.gateway_protocol.FailJobResponse\"\x00\x12\\\n\x0bGetWorkflow\x12$.gateway_protocol.GetWorkflowRequest\x1a%.gateway_protocol.GetWorkflowResponse\"\x00\x12\x62\n\rListWorkflows\x12&.gateway_protocol.ListWorkflowsRequest\x1a\'.gateway_protocol.ListWorkflowsResponse\"\x00\x12\x65\n\x0ePublishMessage\x12\'.gateway_protocol.PublishMessageRequest\x1a(.gateway_protocol.PublishMessageResponse\"\x00\x12h\n\x0fResolveIncident\x12(.gateway_protocol.ResolveIncidentRequest\x1a).gateway_protocol.ResolveIncidentResponse\"\x00\x12_\n\x0cSetVariables\x12%.gateway_protocol.SetVariablesRequest\x1a&.gateway_protocol.SetVariablesResponse\"\x00\x12S\n\x08Topology\x12!.gateway_protocol.TopologyRequest\x1a\".gateway_protocol.TopologyResponse\"\x00\x12k\n\x10UpdateJobRetries\x12).gateway_protocol.UpdateJobRetriesRequest\x1a*.gateway_protocol.UpdateJobRetriesResponse\"\x00\x42!\n\x19io.zeebe.gateway.protocolP\x00Z\x02pbb\x06proto3')
+  serialized_pb=_b('\n\rgateway.proto\x12\x10gateway_protocol\"v\n\x13\x41\x63tivateJobsRequest\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0e\n\x06worker\x18\x02 \x01(\t\x12\x0f\n\x07timeout\x18\x03 \x01(\x03\x12\x19\n\x11maxJobsToActivate\x18\x04 \x01(\x05\x12\x15\n\rfetchVariable\x18\x05 \x03(\t\"D\n\x14\x41\x63tivateJobsResponse\x12,\n\x04jobs\x18\x01 \x03(\x0b\x32\x1e.gateway_protocol.ActivatedJob\"\xb8\x01\n\x0c\x41\x63tivatedJob\x12\x0b\n\x03key\x18\x01 \x01(\x03\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x30\n\njobHeaders\x18\x03 \x01(\x0b\x32\x1c.gateway_protocol.JobHeaders\x12\x15\n\rcustomHeaders\x18\x04 \x01(\t\x12\x0e\n\x06worker\x18\x05 \x01(\t\x12\x0f\n\x07retries\x18\x06 \x01(\x05\x12\x10\n\x08\x64\x65\x61\x64line\x18\x07 \x01(\x03\x12\x11\n\tvariables\x18\x08 \x01(\t\"\xa7\x01\n\nJobHeaders\x12\x1b\n\x13workflowInstanceKey\x18\x01 \x01(\x03\x12\x15\n\rbpmnProcessId\x18\x02 \x01(\t\x12!\n\x19workflowDefinitionVersion\x18\x03 \x01(\x05\x12\x13\n\x0bworkflowKey\x18\x04 \x01(\x03\x12\x11\n\telementId\x18\x05 \x01(\t\x12\x1a\n\x12\x65lementInstanceKey\x18\x06 \x01(\x03\"<\n\x1d\x43\x61ncelWorkflowInstanceRequest\x12\x1b\n\x13workflowInstanceKey\x18\x01 \x01(\x03\" \n\x1e\x43\x61ncelWorkflowInstanceResponse\"7\n\x12\x43ompleteJobRequest\x12\x0e\n\x06jobKey\x18\x01 \x01(\x03\x12\x11\n\tvariables\x18\x02 \x01(\t\"\x15\n\x13\x43ompleteJobResponse\"o\n\x1d\x43reateWorkflowInstanceRequest\x12\x13\n\x0bworkflowKey\x18\x01 \x01(\x03\x12\x15\n\rbpmnProcessId\x18\x02 \x01(\t\x12\x0f\n\x07version\x18\x03 \x01(\x05\x12\x11\n\tvariables\x18\x04 \x01(\t\"z\n\x1e\x43reateWorkflowInstanceResponse\x12\x13\n\x0bworkflowKey\x18\x01 \x01(\x03\x12\x15\n\rbpmnProcessId\x18\x02 \x01(\t\x12\x0f\n\x07version\x18\x03 \x01(\x05\x12\x1b\n\x13workflowInstanceKey\x18\x05 \x01(\x03\"S\n\x15\x44\x65ployWorkflowRequest\x12:\n\tworkflows\x18\x01 \x03(\x0b\x32\'.gateway_protocol.WorkflowRequestObject\"\xab\x01\n\x15WorkflowRequestObject\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x42\n\x04type\x18\x02 \x01(\x0e\x32\x34.gateway_protocol.WorkflowRequestObject.ResourceType\x12\x12\n\ndefinition\x18\x03 \x01(\x0c\",\n\x0cResourceType\x12\x08\n\x04\x46ILE\x10\x00\x12\x08\n\x04\x42PMN\x10\x01\x12\x08\n\x04YAML\x10\x02\"\\\n\x16\x44\x65ployWorkflowResponse\x12\x0b\n\x03key\x18\x01 \x01(\x03\x12\x35\n\tworkflows\x18\x02 \x03(\x0b\x32\".gateway_protocol.WorkflowMetadata\"e\n\x10WorkflowMetadata\x12\x15\n\rbpmnProcessId\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\x05\x12\x13\n\x0bworkflowKey\x18\x03 \x01(\x03\x12\x14\n\x0cresourceName\x18\x04 \x01(\t\"G\n\x0e\x46\x61ilJobRequest\x12\x0e\n\x06jobKey\x18\x01 \x01(\x03\x12\x0f\n\x07retries\x18\x02 \x01(\x05\x12\x14\n\x0c\x65rrorMessage\x18\x03 \x01(\t\"\x11\n\x0f\x46\x61ilJobResponse\"w\n\x15PublishMessageRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x16\n\x0e\x63orrelationKey\x18\x02 \x01(\t\x12\x12\n\ntimeToLive\x18\x03 \x01(\x03\x12\x11\n\tmessageId\x18\x04 \x01(\t\x12\x11\n\tvariables\x18\x05 \x01(\t\"\x18\n\x16PublishMessageResponse\"-\n\x16ResolveIncidentRequest\x12\x13\n\x0bincidentKey\x18\x01 \x01(\x03\"\x19\n\x17ResolveIncidentResponse\"\x11\n\x0fTopologyRequest\"\x8a\x01\n\x10TopologyResponse\x12-\n\x07\x62rokers\x18\x01 \x03(\x0b\x32\x1c.gateway_protocol.BrokerInfo\x12\x13\n\x0b\x63lusterSize\x18\x02 \x01(\x05\x12\x17\n\x0fpartitionsCount\x18\x03 \x01(\x05\x12\x19\n\x11replicationFactor\x18\x04 \x01(\x05\"i\n\nBrokerInfo\x12\x0e\n\x06nodeId\x18\x01 \x01(\x05\x12\x0c\n\x04host\x18\x02 \x01(\t\x12\x0c\n\x04port\x18\x03 \x01(\x05\x12/\n\npartitions\x18\x04 \x03(\x0b\x32\x1b.gateway_protocol.Partition\"\x90\x01\n\tPartition\x12\x13\n\x0bpartitionId\x18\x01 \x01(\x05\x12=\n\x04role\x18\x03 \x01(\x0e\x32/.gateway_protocol.Partition.PartitionBrokerRole\"/\n\x13PartitionBrokerRole\x12\n\n\x06LEADER\x10\x00\x12\x0c\n\x08\x46OLLOWER\x10\x01\":\n\x17UpdateJobRetriesRequest\x12\x0e\n\x06jobKey\x18\x01 \x01(\x03\x12\x0f\n\x07retries\x18\x02 \x01(\x05\"\x1a\n\x18UpdateJobRetriesResponse\"S\n\x13SetVariablesRequest\x12\x1a\n\x12\x65lementInstanceKey\x18\x01 \x01(\x03\x12\x11\n\tvariables\x18\x02 \x01(\t\x12\r\n\x05local\x18\x03 \x01(\x08\"\x16\n\x14SetVariablesResponse2\xf5\x08\n\x07Gateway\x12\x61\n\x0c\x41\x63tivateJobs\x12%.gateway_protocol.ActivateJobsRequest\x1a&.gateway_protocol.ActivateJobsResponse\"\x00\x30\x01\x12}\n\x16\x43\x61ncelWorkflowInstance\x12/.gateway_protocol.CancelWorkflowInstanceRequest\x1a\x30.gateway_protocol.CancelWorkflowInstanceResponse\"\x00\x12\\\n\x0b\x43ompleteJob\x12$.gateway_protocol.CompleteJobRequest\x1a%.gateway_protocol.CompleteJobResponse\"\x00\x12}\n\x16\x43reateWorkflowInstance\x12/.gateway_protocol.CreateWorkflowInstanceRequest\x1a\x30.gateway_protocol.CreateWorkflowInstanceResponse\"\x00\x12\x65\n\x0e\x44\x65ployWorkflow\x12\'.gateway_protocol.DeployWorkflowRequest\x1a(.gateway_protocol.DeployWorkflowResponse\"\x00\x12P\n\x07\x46\x61ilJob\x12 .gateway_protocol.FailJobRequest\x1a!.gateway_protocol.FailJobResponse\"\x00\x12\x65\n\x0ePublishMessage\x12\'.gateway_protocol.PublishMessageRequest\x1a(.gateway_protocol.PublishMessageResponse\"\x00\x12h\n\x0fResolveIncident\x12(.gateway_protocol.ResolveIncidentRequest\x1a).gateway_protocol.ResolveIncidentResponse\"\x00\x12_\n\x0cSetVariables\x12%.gateway_protocol.SetVariablesRequest\x1a&.gateway_protocol.SetVariablesResponse\"\x00\x12S\n\x08Topology\x12!.gateway_protocol.TopologyRequest\x1a\".gateway_protocol.TopologyResponse\"\x00\x12k\n\x10UpdateJobRetries\x12).gateway_protocol.UpdateJobRetriesRequest\x1a*.gateway_protocol.UpdateJobRetriesResponse\"\x00\x42!\n\x19io.zeebe.gateway.protocolP\x00Z\x02pbb\x06proto3')
 )
 
 
@@ -68,8 +68,8 @@ _PARTITION_PARTITIONBROKERROLE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2462,
-  serialized_end=2509,
+  serialized_start=2129,
+  serialized_end=2176,
 )
 _sym_db.RegisterEnumDescriptor(_PARTITION_PARTITIONBROKERROLE)
 
@@ -767,172 +767,6 @@ _FAILJOBRESPONSE = _descriptor.Descriptor(
 )
 
 
-_GETWORKFLOWREQUEST = _descriptor.Descriptor(
-  name='GetWorkflowRequest',
-  full_name='gateway_protocol.GetWorkflowRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='workflowKey', full_name='gateway_protocol.GetWorkflowRequest.workflowKey', index=0,
-      number=1, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='version', full_name='gateway_protocol.GetWorkflowRequest.version', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='bpmnProcessId', full_name='gateway_protocol.GetWorkflowRequest.bpmnProcessId', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1543,
-  serialized_end=1624,
-)
-
-
-_GETWORKFLOWRESPONSE = _descriptor.Descriptor(
-  name='GetWorkflowResponse',
-  full_name='gateway_protocol.GetWorkflowResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='workflowKey', full_name='gateway_protocol.GetWorkflowResponse.workflowKey', index=0,
-      number=1, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='version', full_name='gateway_protocol.GetWorkflowResponse.version', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='bpmnProcessId', full_name='gateway_protocol.GetWorkflowResponse.bpmnProcessId', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='resourceName', full_name='gateway_protocol.GetWorkflowResponse.resourceName', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='bpmnXml', full_name='gateway_protocol.GetWorkflowResponse.bpmnXml', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1626,
-  serialized_end=1747,
-)
-
-
-_LISTWORKFLOWSREQUEST = _descriptor.Descriptor(
-  name='ListWorkflowsRequest',
-  full_name='gateway_protocol.ListWorkflowsRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='bpmnProcessId', full_name='gateway_protocol.ListWorkflowsRequest.bpmnProcessId', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1749,
-  serialized_end=1794,
-)
-
-
-_LISTWORKFLOWSRESPONSE = _descriptor.Descriptor(
-  name='ListWorkflowsResponse',
-  full_name='gateway_protocol.ListWorkflowsResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='workflows', full_name='gateway_protocol.ListWorkflowsResponse.workflows', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1796,
-  serialized_end=1874,
-)
-
-
 _PUBLISHMESSAGEREQUEST = _descriptor.Descriptor(
   name='PublishMessageRequest',
   full_name='gateway_protocol.PublishMessageRequest',
@@ -987,8 +821,8 @@ _PUBLISHMESSAGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1876,
-  serialized_end=1995,
+  serialized_start=1543,
+  serialized_end=1662,
 )
 
 
@@ -1011,8 +845,8 @@ _PUBLISHMESSAGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1997,
-  serialized_end=2021,
+  serialized_start=1664,
+  serialized_end=1688,
 )
 
 
@@ -1042,8 +876,8 @@ _RESOLVEINCIDENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2023,
-  serialized_end=2068,
+  serialized_start=1690,
+  serialized_end=1735,
 )
 
 
@@ -1066,8 +900,8 @@ _RESOLVEINCIDENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2070,
-  serialized_end=2095,
+  serialized_start=1737,
+  serialized_end=1762,
 )
 
 
@@ -1090,8 +924,8 @@ _TOPOLOGYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2097,
-  serialized_end=2114,
+  serialized_start=1764,
+  serialized_end=1781,
 )
 
 
@@ -1142,8 +976,8 @@ _TOPOLOGYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2117,
-  serialized_end=2255,
+  serialized_start=1784,
+  serialized_end=1922,
 )
 
 
@@ -1194,8 +1028,8 @@ _BROKERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2257,
-  serialized_end=2362,
+  serialized_start=1924,
+  serialized_end=2029,
 )
 
 
@@ -1233,8 +1067,8 @@ _PARTITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2365,
-  serialized_end=2509,
+  serialized_start=2032,
+  serialized_end=2176,
 )
 
 
@@ -1271,8 +1105,8 @@ _UPDATEJOBRETRIESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2511,
-  serialized_end=2569,
+  serialized_start=2178,
+  serialized_end=2236,
 )
 
 
@@ -1295,8 +1129,8 @@ _UPDATEJOBRETRIESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2571,
-  serialized_end=2597,
+  serialized_start=2238,
+  serialized_end=2264,
 )
 
 
@@ -1340,8 +1174,8 @@ _SETVARIABLESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2599,
-  serialized_end=2682,
+  serialized_start=2266,
+  serialized_end=2349,
 )
 
 
@@ -1364,8 +1198,8 @@ _SETVARIABLESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2684,
-  serialized_end=2706,
+  serialized_start=2351,
+  serialized_end=2373,
 )
 
 _ACTIVATEJOBSRESPONSE.fields_by_name['jobs'].message_type = _ACTIVATEDJOB
@@ -1374,7 +1208,6 @@ _DEPLOYWORKFLOWREQUEST.fields_by_name['workflows'].message_type = _WORKFLOWREQUE
 _WORKFLOWREQUESTOBJECT.fields_by_name['type'].enum_type = _WORKFLOWREQUESTOBJECT_RESOURCETYPE
 _WORKFLOWREQUESTOBJECT_RESOURCETYPE.containing_type = _WORKFLOWREQUESTOBJECT
 _DEPLOYWORKFLOWRESPONSE.fields_by_name['workflows'].message_type = _WORKFLOWMETADATA
-_LISTWORKFLOWSRESPONSE.fields_by_name['workflows'].message_type = _WORKFLOWMETADATA
 _TOPOLOGYRESPONSE.fields_by_name['brokers'].message_type = _BROKERINFO
 _BROKERINFO.fields_by_name['partitions'].message_type = _PARTITION
 _PARTITION.fields_by_name['role'].enum_type = _PARTITION_PARTITIONBROKERROLE
@@ -1395,10 +1228,6 @@ DESCRIPTOR.message_types_by_name['DeployWorkflowResponse'] = _DEPLOYWORKFLOWRESP
 DESCRIPTOR.message_types_by_name['WorkflowMetadata'] = _WORKFLOWMETADATA
 DESCRIPTOR.message_types_by_name['FailJobRequest'] = _FAILJOBREQUEST
 DESCRIPTOR.message_types_by_name['FailJobResponse'] = _FAILJOBRESPONSE
-DESCRIPTOR.message_types_by_name['GetWorkflowRequest'] = _GETWORKFLOWREQUEST
-DESCRIPTOR.message_types_by_name['GetWorkflowResponse'] = _GETWORKFLOWRESPONSE
-DESCRIPTOR.message_types_by_name['ListWorkflowsRequest'] = _LISTWORKFLOWSREQUEST
-DESCRIPTOR.message_types_by_name['ListWorkflowsResponse'] = _LISTWORKFLOWSRESPONSE
 DESCRIPTOR.message_types_by_name['PublishMessageRequest'] = _PUBLISHMESSAGEREQUEST
 DESCRIPTOR.message_types_by_name['PublishMessageResponse'] = _PUBLISHMESSAGERESPONSE
 DESCRIPTOR.message_types_by_name['ResolveIncidentRequest'] = _RESOLVEINCIDENTREQUEST
@@ -1525,34 +1354,6 @@ FailJobResponse = _reflection.GeneratedProtocolMessageType('FailJobResponse', (_
   ))
 _sym_db.RegisterMessage(FailJobResponse)
 
-GetWorkflowRequest = _reflection.GeneratedProtocolMessageType('GetWorkflowRequest', (_message.Message,), dict(
-  DESCRIPTOR = _GETWORKFLOWREQUEST,
-  __module__ = 'gateway_pb2'
-  # @@protoc_insertion_point(class_scope:gateway_protocol.GetWorkflowRequest)
-  ))
-_sym_db.RegisterMessage(GetWorkflowRequest)
-
-GetWorkflowResponse = _reflection.GeneratedProtocolMessageType('GetWorkflowResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETWORKFLOWRESPONSE,
-  __module__ = 'gateway_pb2'
-  # @@protoc_insertion_point(class_scope:gateway_protocol.GetWorkflowResponse)
-  ))
-_sym_db.RegisterMessage(GetWorkflowResponse)
-
-ListWorkflowsRequest = _reflection.GeneratedProtocolMessageType('ListWorkflowsRequest', (_message.Message,), dict(
-  DESCRIPTOR = _LISTWORKFLOWSREQUEST,
-  __module__ = 'gateway_pb2'
-  # @@protoc_insertion_point(class_scope:gateway_protocol.ListWorkflowsRequest)
-  ))
-_sym_db.RegisterMessage(ListWorkflowsRequest)
-
-ListWorkflowsResponse = _reflection.GeneratedProtocolMessageType('ListWorkflowsResponse', (_message.Message,), dict(
-  DESCRIPTOR = _LISTWORKFLOWSRESPONSE,
-  __module__ = 'gateway_pb2'
-  # @@protoc_insertion_point(class_scope:gateway_protocol.ListWorkflowsResponse)
-  ))
-_sym_db.RegisterMessage(ListWorkflowsResponse)
-
 PublishMessageRequest = _reflection.GeneratedProtocolMessageType('PublishMessageRequest', (_message.Message,), dict(
   DESCRIPTOR = _PUBLISHMESSAGEREQUEST,
   __module__ = 'gateway_pb2'
@@ -1646,8 +1447,8 @@ _GATEWAY = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=2709,
-  serialized_end=4044,
+  serialized_start=2376,
+  serialized_end=3517,
   methods=[
   _descriptor.MethodDescriptor(
     name='ActivateJobs',
@@ -1704,27 +1505,9 @@ _GATEWAY = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='GetWorkflow',
-    full_name='gateway_protocol.Gateway.GetWorkflow',
-    index=6,
-    containing_service=None,
-    input_type=_GETWORKFLOWREQUEST,
-    output_type=_GETWORKFLOWRESPONSE,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='ListWorkflows',
-    full_name='gateway_protocol.Gateway.ListWorkflows',
-    index=7,
-    containing_service=None,
-    input_type=_LISTWORKFLOWSREQUEST,
-    output_type=_LISTWORKFLOWSRESPONSE,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
     name='PublishMessage',
     full_name='gateway_protocol.Gateway.PublishMessage',
-    index=8,
+    index=6,
     containing_service=None,
     input_type=_PUBLISHMESSAGEREQUEST,
     output_type=_PUBLISHMESSAGERESPONSE,
@@ -1733,7 +1516,7 @@ _GATEWAY = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='ResolveIncident',
     full_name='gateway_protocol.Gateway.ResolveIncident',
-    index=9,
+    index=7,
     containing_service=None,
     input_type=_RESOLVEINCIDENTREQUEST,
     output_type=_RESOLVEINCIDENTRESPONSE,
@@ -1742,7 +1525,7 @@ _GATEWAY = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='SetVariables',
     full_name='gateway_protocol.Gateway.SetVariables',
-    index=10,
+    index=8,
     containing_service=None,
     input_type=_SETVARIABLESREQUEST,
     output_type=_SETVARIABLESRESPONSE,
@@ -1751,7 +1534,7 @@ _GATEWAY = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='Topology',
     full_name='gateway_protocol.Gateway.Topology',
-    index=11,
+    index=9,
     containing_service=None,
     input_type=_TOPOLOGYREQUEST,
     output_type=_TOPOLOGYRESPONSE,
@@ -1760,7 +1543,7 @@ _GATEWAY = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='UpdateJobRetries',
     full_name='gateway_protocol.Gateway.UpdateJobRetries',
-    index=12,
+    index=10,
     containing_service=None,
     input_type=_UPDATEJOBRETRIESREQUEST,
     output_type=_UPDATEJOBRETRIESRESPONSE,
