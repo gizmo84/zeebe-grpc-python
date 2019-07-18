@@ -2,11 +2,11 @@
 
 This package contains two GRPC Gateway Files needed to build a zeebe-client (https://zeebe.io/) with Python.
 
-Both files were generated following the instructions on this blog post:
+Both files were generated following the instructions on this (now outdated) blog post:
 https://zeebe.io/blog/2018/11/grpc-generating-a-zeebe-python-client/
 
 ```bash
-wget https://github.com/zeebe-io/zeebe/raw/0.17.0/gateway-protocol/src/main/proto/gateway.proto
+wget https://raw.githubusercontent.com/zeebe-io/zeebe/0.20.0/gateway-protocol/src/main/proto/gateway.proto
 
 pip install grpcio grpcio-tools
 

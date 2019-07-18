@@ -1,1 +1,0 @@
-name = "zeebe_grpc"
