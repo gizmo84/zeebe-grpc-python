@@ -10,7 +10,7 @@ wget https://raw.githubusercontent.com/zeebe-io/zeebe/0.20.0/gateway-protocol/sr
 
 pip install grpcio grpcio-tools
 
-python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. ./gateway.proto
+python -m grpc_tools.protoc -Izeebe_grpc/ --python_out=zeebe_grpc/ --grpc_python_out=zeebe_grpc/ ./gateway.proto
 ```
 
 ## How to install and use this package?
