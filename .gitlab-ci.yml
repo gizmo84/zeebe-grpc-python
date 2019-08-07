@@ -3,7 +3,6 @@ before_script:
 
 stages:
   - build
-  - deploy
 
 variables:
   PROTO_FILE_URL: https://raw.githubusercontent.com/zeebe-io/zeebe/0.20.0/gateway-protocol/src/main/proto/gateway.proto
@@ -15,10 +14,3 @@ build_grpc:
   script:
     - wget -O $PROTO_FILE_PATH/$PROTO_FILE $PROTO_FILE_URL
     - python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. $PROTO_FILE_PATH/$PROTO_FILE
-
-deploy_latest:
-  stage: deploy
-  only:
-    - master
-  script:
-    - echo $PYPI_USER
