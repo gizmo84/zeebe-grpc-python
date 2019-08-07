@@ -1,6 +1,7 @@
 # zeebe Python GRPC gateway files
 
-This package contains two GRPC Gateway Files needed to build a zeebe-client (https://zeebe.io/) with Python.
+This package contains two GRPC Gateway Files needed to build a zeebe-client or a zeebe-worker (https://zeebe.io/) 
+with Python.
 
 Both files were generated following the instructions on this (now outdated) blog post:
 https://zeebe.io/blog/2018/11/grpc-generating-a-zeebe-python-client/

@@ -4,4 +4,4 @@ build
 dist
 *.egg-info
 venv
-zeebe_grpc/gateway.proto
+gateway.proto
