@@ -10,7 +10,6 @@ build_latest:
   only:
     - master
   script:
-    -
     - echo $PYPI_USER
 
 deploy_latest:
@@ -19,4 +18,3 @@ deploy_latest:
     - master
   script:
     - echo $PYPI_USER
-
