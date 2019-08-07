@@ -13,8 +13,9 @@ build_latest:
   only:
     - master
   script:
+    - cd zeebe_grpc
     - wget $PROTO_FILE
-    - python -m grpc_tools.protoc -Izeebe_grpc/ --python_out=zeebe_grpc/ --grpc_python_out=zeebe_grpc/ ./gateway.proto
+    - python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. gateway.proto
 
 deploy_latest:
   stage: deploy
