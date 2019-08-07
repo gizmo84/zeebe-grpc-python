@@ -5,12 +5,16 @@ stages:
   - build
   - deploy
 
+variables:
+  PROTO_FILE: https://raw.githubusercontent.com/zeebe-io/zeebe/0.20.0/gateway-protocol/src/main/proto/gateway.proto
+
 build_latest:
   stage: build
   only:
     - master
   script:
-    - echo $PYPI_USER
+    - wget $PROTO_FILE
+    - python -m grpc_tools.protoc -Izeebe_grpc/ --python_out=zeebe_grpc/ --grpc_python_out=zeebe_grpc/ ./gateway.proto
 
 deploy_latest:
   stage: deploy
