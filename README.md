@@ -13,8 +13,7 @@ pip install zeebe-grpc
 ```
 ```python
 import grpc
-from zeebe_grpc import gateway_pb2
-from zeebe_grpc import gateway_pb2_grpc
+from zeebe_grpc import gateway_pb2, gateway_pb2_grpc
 
 with grpc.insecure_channel("zeebe:26500") as channel:
     stub = gateway_pb2_grpc.GatewayStub(channel)
