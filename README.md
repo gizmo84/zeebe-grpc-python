@@ -12,6 +12,13 @@ https://zeebe.io/blog/2018/11/grpc-generating-a-zeebe-python-client/
 pip install zeebe-grpc
 ```
 ```python
+import grpc
 from zeebe_grpc import gateway_pb2
 from zeebe_grpc import gateway_pb2_grpc
+
+with grpc.insecure_channel(<zeebe brocker>) as channel:
+    stub = gateway_pb2_grpc.GatewayStub(channel)
+    topology = stub.Topology(gateway_pb2.TopologyRequest())
+    
+    print(topology)
 ```
