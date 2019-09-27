@@ -1,6 +1,6 @@
-grpcio==1.23.0
-grpcio-tools==1.23.0
-google==2.0.2
+grpcio==1.24.0
+grpcio-tools==1.24.0
+protobuf==3.9.2
 twine
 setuptools
 wheel
