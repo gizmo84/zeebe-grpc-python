@@ -1,4 +1,6 @@
 grpcio==1.23.0
 grpcio-tools==1.23.0
 google==2.0.2
-twine==2.0.0
+twine
+setuptools
+wheel
