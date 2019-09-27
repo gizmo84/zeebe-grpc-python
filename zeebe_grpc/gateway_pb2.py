@@ -1209,193 +1209,193 @@ DESCRIPTOR.message_types_by_name['SetVariablesRequest'] = _SETVARIABLESREQUEST
 DESCRIPTOR.message_types_by_name['SetVariablesResponse'] = _SETVARIABLESRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-ActivateJobsRequest = _reflection.GeneratedProtocolMessageType('ActivateJobsRequest', (_message.Message,), dict(
-  DESCRIPTOR = _ACTIVATEJOBSREQUEST,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+ActivateJobsRequest = _reflection.GeneratedProtocolMessageType('ActivateJobsRequest', (_message.Message,), {
+  'DESCRIPTOR' : _ACTIVATEJOBSREQUEST,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.ActivateJobsRequest)
-  ))
+  })
 _sym_db.RegisterMessage(ActivateJobsRequest)
 
-ActivateJobsResponse = _reflection.GeneratedProtocolMessageType('ActivateJobsResponse', (_message.Message,), dict(
-  DESCRIPTOR = _ACTIVATEJOBSRESPONSE,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+ActivateJobsResponse = _reflection.GeneratedProtocolMessageType('ActivateJobsResponse', (_message.Message,), {
+  'DESCRIPTOR' : _ACTIVATEJOBSRESPONSE,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.ActivateJobsResponse)
-  ))
+  })
 _sym_db.RegisterMessage(ActivateJobsResponse)
 
-ActivatedJob = _reflection.GeneratedProtocolMessageType('ActivatedJob', (_message.Message,), dict(
-  DESCRIPTOR = _ACTIVATEDJOB,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+ActivatedJob = _reflection.GeneratedProtocolMessageType('ActivatedJob', (_message.Message,), {
+  'DESCRIPTOR' : _ACTIVATEDJOB,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.ActivatedJob)
-  ))
+  })
 _sym_db.RegisterMessage(ActivatedJob)
 
-CancelWorkflowInstanceRequest = _reflection.GeneratedProtocolMessageType('CancelWorkflowInstanceRequest', (_message.Message,), dict(
-  DESCRIPTOR = _CANCELWORKFLOWINSTANCEREQUEST,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+CancelWorkflowInstanceRequest = _reflection.GeneratedProtocolMessageType('CancelWorkflowInstanceRequest', (_message.Message,), {
+  'DESCRIPTOR' : _CANCELWORKFLOWINSTANCEREQUEST,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.CancelWorkflowInstanceRequest)
-  ))
+  })
 _sym_db.RegisterMessage(CancelWorkflowInstanceRequest)
 
-CancelWorkflowInstanceResponse = _reflection.GeneratedProtocolMessageType('CancelWorkflowInstanceResponse', (_message.Message,), dict(
-  DESCRIPTOR = _CANCELWORKFLOWINSTANCERESPONSE,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+CancelWorkflowInstanceResponse = _reflection.GeneratedProtocolMessageType('CancelWorkflowInstanceResponse', (_message.Message,), {
+  'DESCRIPTOR' : _CANCELWORKFLOWINSTANCERESPONSE,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.CancelWorkflowInstanceResponse)
-  ))
+  })
 _sym_db.RegisterMessage(CancelWorkflowInstanceResponse)
 
-CompleteJobRequest = _reflection.GeneratedProtocolMessageType('CompleteJobRequest', (_message.Message,), dict(
-  DESCRIPTOR = _COMPLETEJOBREQUEST,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+CompleteJobRequest = _reflection.GeneratedProtocolMessageType('CompleteJobRequest', (_message.Message,), {
+  'DESCRIPTOR' : _COMPLETEJOBREQUEST,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.CompleteJobRequest)
-  ))
+  })
 _sym_db.RegisterMessage(CompleteJobRequest)
 
-CompleteJobResponse = _reflection.GeneratedProtocolMessageType('CompleteJobResponse', (_message.Message,), dict(
-  DESCRIPTOR = _COMPLETEJOBRESPONSE,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+CompleteJobResponse = _reflection.GeneratedProtocolMessageType('CompleteJobResponse', (_message.Message,), {
+  'DESCRIPTOR' : _COMPLETEJOBRESPONSE,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.CompleteJobResponse)
-  ))
+  })
 _sym_db.RegisterMessage(CompleteJobResponse)
 
-CreateWorkflowInstanceRequest = _reflection.GeneratedProtocolMessageType('CreateWorkflowInstanceRequest', (_message.Message,), dict(
-  DESCRIPTOR = _CREATEWORKFLOWINSTANCEREQUEST,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+CreateWorkflowInstanceRequest = _reflection.GeneratedProtocolMessageType('CreateWorkflowInstanceRequest', (_message.Message,), {
+  'DESCRIPTOR' : _CREATEWORKFLOWINSTANCEREQUEST,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.CreateWorkflowInstanceRequest)
-  ))
+  })
 _sym_db.RegisterMessage(CreateWorkflowInstanceRequest)
 
-CreateWorkflowInstanceResponse = _reflection.GeneratedProtocolMessageType('CreateWorkflowInstanceResponse', (_message.Message,), dict(
-  DESCRIPTOR = _CREATEWORKFLOWINSTANCERESPONSE,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+CreateWorkflowInstanceResponse = _reflection.GeneratedProtocolMessageType('CreateWorkflowInstanceResponse', (_message.Message,), {
+  'DESCRIPTOR' : _CREATEWORKFLOWINSTANCERESPONSE,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.CreateWorkflowInstanceResponse)
-  ))
+  })
 _sym_db.RegisterMessage(CreateWorkflowInstanceResponse)
 
-DeployWorkflowRequest = _reflection.GeneratedProtocolMessageType('DeployWorkflowRequest', (_message.Message,), dict(
-  DESCRIPTOR = _DEPLOYWORKFLOWREQUEST,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+DeployWorkflowRequest = _reflection.GeneratedProtocolMessageType('DeployWorkflowRequest', (_message.Message,), {
+  'DESCRIPTOR' : _DEPLOYWORKFLOWREQUEST,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.DeployWorkflowRequest)
-  ))
+  })
 _sym_db.RegisterMessage(DeployWorkflowRequest)
 
-WorkflowRequestObject = _reflection.GeneratedProtocolMessageType('WorkflowRequestObject', (_message.Message,), dict(
-  DESCRIPTOR = _WORKFLOWREQUESTOBJECT,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+WorkflowRequestObject = _reflection.GeneratedProtocolMessageType('WorkflowRequestObject', (_message.Message,), {
+  'DESCRIPTOR' : _WORKFLOWREQUESTOBJECT,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.WorkflowRequestObject)
-  ))
+  })
 _sym_db.RegisterMessage(WorkflowRequestObject)
 
-DeployWorkflowResponse = _reflection.GeneratedProtocolMessageType('DeployWorkflowResponse', (_message.Message,), dict(
-  DESCRIPTOR = _DEPLOYWORKFLOWRESPONSE,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+DeployWorkflowResponse = _reflection.GeneratedProtocolMessageType('DeployWorkflowResponse', (_message.Message,), {
+  'DESCRIPTOR' : _DEPLOYWORKFLOWRESPONSE,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.DeployWorkflowResponse)
-  ))
+  })
 _sym_db.RegisterMessage(DeployWorkflowResponse)
 
-WorkflowMetadata = _reflection.GeneratedProtocolMessageType('WorkflowMetadata', (_message.Message,), dict(
-  DESCRIPTOR = _WORKFLOWMETADATA,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+WorkflowMetadata = _reflection.GeneratedProtocolMessageType('WorkflowMetadata', (_message.Message,), {
+  'DESCRIPTOR' : _WORKFLOWMETADATA,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.WorkflowMetadata)
-  ))
+  })
 _sym_db.RegisterMessage(WorkflowMetadata)
 
-FailJobRequest = _reflection.GeneratedProtocolMessageType('FailJobRequest', (_message.Message,), dict(
-  DESCRIPTOR = _FAILJOBREQUEST,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+FailJobRequest = _reflection.GeneratedProtocolMessageType('FailJobRequest', (_message.Message,), {
+  'DESCRIPTOR' : _FAILJOBREQUEST,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.FailJobRequest)
-  ))
+  })
 _sym_db.RegisterMessage(FailJobRequest)
 
-FailJobResponse = _reflection.GeneratedProtocolMessageType('FailJobResponse', (_message.Message,), dict(
-  DESCRIPTOR = _FAILJOBRESPONSE,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+FailJobResponse = _reflection.GeneratedProtocolMessageType('FailJobResponse', (_message.Message,), {
+  'DESCRIPTOR' : _FAILJOBRESPONSE,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.FailJobResponse)
-  ))
+  })
 _sym_db.RegisterMessage(FailJobResponse)
 
-PublishMessageRequest = _reflection.GeneratedProtocolMessageType('PublishMessageRequest', (_message.Message,), dict(
-  DESCRIPTOR = _PUBLISHMESSAGEREQUEST,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+PublishMessageRequest = _reflection.GeneratedProtocolMessageType('PublishMessageRequest', (_message.Message,), {
+  'DESCRIPTOR' : _PUBLISHMESSAGEREQUEST,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.PublishMessageRequest)
-  ))
+  })
 _sym_db.RegisterMessage(PublishMessageRequest)
 
-PublishMessageResponse = _reflection.GeneratedProtocolMessageType('PublishMessageResponse', (_message.Message,), dict(
-  DESCRIPTOR = _PUBLISHMESSAGERESPONSE,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+PublishMessageResponse = _reflection.GeneratedProtocolMessageType('PublishMessageResponse', (_message.Message,), {
+  'DESCRIPTOR' : _PUBLISHMESSAGERESPONSE,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.PublishMessageResponse)
-  ))
+  })
 _sym_db.RegisterMessage(PublishMessageResponse)
 
-ResolveIncidentRequest = _reflection.GeneratedProtocolMessageType('ResolveIncidentRequest', (_message.Message,), dict(
-  DESCRIPTOR = _RESOLVEINCIDENTREQUEST,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+ResolveIncidentRequest = _reflection.GeneratedProtocolMessageType('ResolveIncidentRequest', (_message.Message,), {
+  'DESCRIPTOR' : _RESOLVEINCIDENTREQUEST,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.ResolveIncidentRequest)
-  ))
+  })
 _sym_db.RegisterMessage(ResolveIncidentRequest)
 
-ResolveIncidentResponse = _reflection.GeneratedProtocolMessageType('ResolveIncidentResponse', (_message.Message,), dict(
-  DESCRIPTOR = _RESOLVEINCIDENTRESPONSE,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+ResolveIncidentResponse = _reflection.GeneratedProtocolMessageType('ResolveIncidentResponse', (_message.Message,), {
+  'DESCRIPTOR' : _RESOLVEINCIDENTRESPONSE,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.ResolveIncidentResponse)
-  ))
+  })
 _sym_db.RegisterMessage(ResolveIncidentResponse)
 
-TopologyRequest = _reflection.GeneratedProtocolMessageType('TopologyRequest', (_message.Message,), dict(
-  DESCRIPTOR = _TOPOLOGYREQUEST,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+TopologyRequest = _reflection.GeneratedProtocolMessageType('TopologyRequest', (_message.Message,), {
+  'DESCRIPTOR' : _TOPOLOGYREQUEST,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.TopologyRequest)
-  ))
+  })
 _sym_db.RegisterMessage(TopologyRequest)
 
-TopologyResponse = _reflection.GeneratedProtocolMessageType('TopologyResponse', (_message.Message,), dict(
-  DESCRIPTOR = _TOPOLOGYRESPONSE,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+TopologyResponse = _reflection.GeneratedProtocolMessageType('TopologyResponse', (_message.Message,), {
+  'DESCRIPTOR' : _TOPOLOGYRESPONSE,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.TopologyResponse)
-  ))
+  })
 _sym_db.RegisterMessage(TopologyResponse)
 
-BrokerInfo = _reflection.GeneratedProtocolMessageType('BrokerInfo', (_message.Message,), dict(
-  DESCRIPTOR = _BROKERINFO,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+BrokerInfo = _reflection.GeneratedProtocolMessageType('BrokerInfo', (_message.Message,), {
+  'DESCRIPTOR' : _BROKERINFO,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.BrokerInfo)
-  ))
+  })
 _sym_db.RegisterMessage(BrokerInfo)
 
-Partition = _reflection.GeneratedProtocolMessageType('Partition', (_message.Message,), dict(
-  DESCRIPTOR = _PARTITION,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+Partition = _reflection.GeneratedProtocolMessageType('Partition', (_message.Message,), {
+  'DESCRIPTOR' : _PARTITION,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.Partition)
-  ))
+  })
 _sym_db.RegisterMessage(Partition)
 
-UpdateJobRetriesRequest = _reflection.GeneratedProtocolMessageType('UpdateJobRetriesRequest', (_message.Message,), dict(
-  DESCRIPTOR = _UPDATEJOBRETRIESREQUEST,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+UpdateJobRetriesRequest = _reflection.GeneratedProtocolMessageType('UpdateJobRetriesRequest', (_message.Message,), {
+  'DESCRIPTOR' : _UPDATEJOBRETRIESREQUEST,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.UpdateJobRetriesRequest)
-  ))
+  })
 _sym_db.RegisterMessage(UpdateJobRetriesRequest)
 
-UpdateJobRetriesResponse = _reflection.GeneratedProtocolMessageType('UpdateJobRetriesResponse', (_message.Message,), dict(
-  DESCRIPTOR = _UPDATEJOBRETRIESRESPONSE,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+UpdateJobRetriesResponse = _reflection.GeneratedProtocolMessageType('UpdateJobRetriesResponse', (_message.Message,), {
+  'DESCRIPTOR' : _UPDATEJOBRETRIESRESPONSE,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.UpdateJobRetriesResponse)
-  ))
+  })
 _sym_db.RegisterMessage(UpdateJobRetriesResponse)
 
-SetVariablesRequest = _reflection.GeneratedProtocolMessageType('SetVariablesRequest', (_message.Message,), dict(
-  DESCRIPTOR = _SETVARIABLESREQUEST,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+SetVariablesRequest = _reflection.GeneratedProtocolMessageType('SetVariablesRequest', (_message.Message,), {
+  'DESCRIPTOR' : _SETVARIABLESREQUEST,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.SetVariablesRequest)
-  ))
+  })
 _sym_db.RegisterMessage(SetVariablesRequest)
 
-SetVariablesResponse = _reflection.GeneratedProtocolMessageType('SetVariablesResponse', (_message.Message,), dict(
-  DESCRIPTOR = _SETVARIABLESRESPONSE,
-  __module__ = 'zeebe_grpc.gateway_pb2'
+SetVariablesResponse = _reflection.GeneratedProtocolMessageType('SetVariablesResponse', (_message.Message,), {
+  'DESCRIPTOR' : _SETVARIABLESRESPONSE,
+  '__module__' : 'zeebe_grpc.gateway_pb2'
   # @@protoc_insertion_point(class_scope:gateway_protocol.SetVariablesResponse)
-  ))
+  })
 _sym_db.RegisterMessage(SetVariablesResponse)
 
 
