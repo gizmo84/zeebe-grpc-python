@@ -15,5 +15,5 @@ build_and_upload:
     - wget -O $PROTO_FILE_PATH/$PROTO_FILE_NAME $PROTO_FILE_URL
     - python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. $PROTO_FILE_PATH/$PROTO_FILE_NAME
     - python setup.py sdist bdist_wheel
-    - twine upload dist/* --username="__token__" --password=$K8S_SECRET_PYPI_TOKEN
+    - twine upload dist/* --verbose --username="__token__" --password=$K8S_SECRET_PYPI_TOKEN
 
