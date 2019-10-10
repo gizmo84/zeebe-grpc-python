@@ -19,4 +19,5 @@ build:
 
 upload:
   stage: upload
-    - twine upload dist/*
+  script:
+    - twine upload dist/* --username="__token__" --password=$K8S_SECRET_PYPI_TOKEN
