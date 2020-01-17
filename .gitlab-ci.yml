@@ -5,7 +5,7 @@ stages:
   - build_and_upload
 
 variables:
-  PROTO_FILE_URL: https://raw.githubusercontent.com/zeebe-io/zeebe/0.21.1/gateway-protocol/src/main/proto/gateway.proto
+  PROTO_FILE_URL: https://raw.githubusercontent.com/zeebe-io/zeebe/0.22.1/gateway-protocol/src/main/proto/gateway.proto
   PROTO_FILE_PATH: zeebe_grpc
   PROTO_FILE_NAME: gateway.proto
 
