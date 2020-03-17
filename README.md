@@ -17,7 +17,7 @@ import logging
 import grpc
 from zeebe_grpc import gateway_pb2, gateway_pb2_grpc
 
-with grpc.insecure_channel("zeebe:26500") as channel:
+with grpc.insecure_channel("localhost:26500") as channel:
     stub = gateway_pb2_grpc.GatewayStub(channel)
 
     # print the topology of the zeebe cluster
