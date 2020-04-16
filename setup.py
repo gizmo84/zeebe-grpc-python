@@ -14,7 +14,7 @@ setuptools.setup(
     url="https://gitlab.com/stephane.ludwig/zeebe_python_grpc",
     packages=setuptools.find_packages(),
     install_requires=[
-        'grpcio==1.27.2',
+        'grpcio==1.28.1',
         'protobuf==3.11.3',
     ],
     classifiers=[
