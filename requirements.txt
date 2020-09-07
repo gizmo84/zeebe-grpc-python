@@ -1,6 +1,6 @@
-grpcio==1.30.0
-grpcio-tools==1.30.0
-protobuf==3.12.4
+grpcio==1.31.0
+grpcio-tools==1.31.0
+protobuf==3.13.0
 twine
 setuptools
 wheel
