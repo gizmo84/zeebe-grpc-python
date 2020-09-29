@@ -1,7 +1,9 @@
 .idea
 __pycache__
+venv
 build
 dist
 *.egg-info
-venv
+zeebe_grpc/gateway_pb2.py
+zeebe_grpc/gateway_pb2_grpc.py
 zeebe_grpc/gateway.proto
