@@ -1,20 +1,16 @@
 image: python:3.8
 
-before_script:
-  - pip install -r requirements.txt
-
-stages:
-  - build_and_upload
-
 variables:
-  PROTO_FILE_URL: https://raw.githubusercontent.com/zeebe-io/zeebe/0.24.3/gateway-protocol/src/main/proto/gateway.proto
+  ZEEBE_VERSION: 0.24.3
+  PROTO_FILE_URL: https://raw.githubusercontent.com/zeebe-io/zeebe/$ZEEBE_VERSION/gateway-protocol/src/main/proto/gateway.proto
   PROTO_FILE_PATH: zeebe_grpc
   PROTO_FILE_NAME: gateway.proto
 
-build_and_upload:
-  stage: build_and_upload
+run:
   script:
+    - pip install twine
+    - pip install -r requirements_dev.txt
     - wget -O $PROTO_FILE_PATH/$PROTO_FILE_NAME $PROTO_FILE_URL
     - python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. $PROTO_FILE_PATH/$PROTO_FILE_NAME
     - python setup.py sdist bdist_wheel
-    - twine upload dist/* --verbose --username="__token__" --password=$PYPI_TOKEN
+    - python -m twine upload --username="__token__" --password=$PYPI_TOKEN dist/*
