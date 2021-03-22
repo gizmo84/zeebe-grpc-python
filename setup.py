@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="zeebe_grpc",
-    version="0.26.0.0",
+    version="1.0.0a3",
     author="Stéphane Ludwig",
     author_email="gitlab@stephane-ludwig.net",
     description="zeebe Python gRPC Gateway",
@@ -14,8 +14,8 @@ setuptools.setup(
     url="https://gitlab.com/stephane.ludwig/zeebe_python_grpc",
     packages=setuptools.find_packages(),
     install_requires=[
-        'grpcio==1.34.0',
-        'protobuf==3.14.0',
+        'grpcio==1.36.1',
+        'protobuf==3.15.6',
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
