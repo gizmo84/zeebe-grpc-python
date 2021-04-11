@@ -24,27 +24,26 @@ with grpc.insecure_channel("localhost:26500") as channel:
     topology = stub.Topology(gateway_pb2.TopologyRequest())
     print(topology)
 
-    # deploy a workflow definition
-    with open('bpmn/echo.bpmn', 'rb') as workflow_definition_file:
-        workflow_definition = workflow_definition_file.read()
-        workflow = gateway_pb2.WorkflowRequestObject(
-            name="ECHO",
-            type=gateway_pb2.WorkflowRequestObject.BPMN,
-            definition=workflow_definition
+    # deploy a process definition
+    with open("bpmn/echo.bpmn", "rb") as process_definition_file:
+        process_definition = process_definition_file.read()
+        process = gateway_pb2.ProcessRequestObject(
+            type=gateway_pb2.ProcessRequestObject.BPMN,
+            definition=process_definition
         )
-    stub.DeployWorkflow(
-        gateway_pb2.DeployWorkflowRequest(
-            workflows=[workflow]
+    stub.DeployProcess(
+        gateway_pb2.DeployProcessRequest(
+            processes=[process]
         )
     )
 
-    # start a workflow instance
+    # start a process instance
     variables = {
         "message": "This is a Message"
     }
-    stub.CreateWorkflowInstance(
-        gateway_pb2.CreateWorkflowInstanceRequest(
-            bpmnProcessId='ECHO',
+    stub.CreateProcessInstance(
+        gateway_pb2.CreateProcessInstanceRequest(
+            bpmnProcessId="ECHO",
             version=-1,
             variables=json.dumps(variables)
         )
@@ -53,8 +52,8 @@ with grpc.insecure_channel("localhost:26500") as channel:
     # start a worker
     activate_jobs_response = stub.ActivateJobs(
         gateway_pb2.ActivateJobsRequest(
-            type='echo',
-            worker='Python worker',
+            type="echo",
+            worker="Python worker",
             timeout=60000,
             maxJobsToActivate=32
         )
@@ -64,10 +63,10 @@ with grpc.insecure_channel("localhost:26500") as channel:
             try:
                 print(job.variables)
                 stub.CompleteJob(gateway_pb2.CompleteJobRequest(jobKey=job.key, variables=json.dumps({})))
-                logging.info('Job Completed')
+                logging.info("Job Completed")
             except Exception as e:
                 stub.FailJob(gateway_pb2.FailJobRequest(jobKey=job.key))
-                logging.info('Job Failed {}'.format(e))
+                logging.info(f"Job Failed {e}")
 ```
 
 ## How to (re)build the Python gRPC?
