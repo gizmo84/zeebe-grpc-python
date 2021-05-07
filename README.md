@@ -28,7 +28,7 @@ with grpc.insecure_channel("localhost:26500") as channel:
     with open("bpmn/echo.bpmn", "rb") as process_definition_file:
         process_definition = process_definition_file.read()
         process = gateway_pb2.ProcessRequestObject(
-            type=gateway_pb2.ProcessRequestObject.BPMN,
+            name="echo.bpmn",
             definition=process_definition
         )
     stub.DeployProcess(

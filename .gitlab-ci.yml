@@ -1,7 +1,7 @@
 image: python:3.8
 
 variables:
-  ZEEBE_VERSION: 1.0.0-alpha6
+  ZEEBE_VERSION: 1.0.0-alpha7
   PROTO_FILE_URL: https://raw.githubusercontent.com/camunda-cloud/zeebe/$ZEEBE_VERSION/gateway-protocol/src/main/proto/gateway.proto
   PROTO_FILE_PATH: zeebe_grpc
   PROTO_FILE_NAME: gateway.proto
