@@ -8,11 +8,12 @@ with Python.
 ```bash
 pip install zeebe-grpc
 ```
+
 ```python
 import json
 import logging
 import grpc
-from zeebe_grpc import gateway_pb2, gateway_pb2_grpc
+from src.zeebe_grpc import gateway_pb2, gateway_pb2_grpc
 
 with grpc.insecure_channel("localhost:26500") as channel:
     stub = gateway_pb2_grpc.GatewayStub(channel)

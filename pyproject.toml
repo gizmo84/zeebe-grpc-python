@@ -1,0 +1,29 @@
+[project]
+name = "zeebe_grpc"
+version = "8.0.5"
+description = "zeebe gRPC stub files for Python"
+authors = [
+    { name = "Stéphane Ludwig", email = "github@stephane-ludwig.net" }
+]
+license = {file = "LICENSE.txt"}
+readme = "README.md"
+requires-python = ">=3.7"
+
+keywords = ["zeebe", "workflow", "workflow-engine", "camunda", "camunda-cloud"]
+
+dependencies = [
+    "grpcio>=1,<2",
+    "protobuf>=3.19.0,<4"
+]
+
+[project.optional-dependencies]
+dev = [
+    "grpcio==1.51.1",
+    "grpcio-tools==1.51.1",
+    "protobuf==3.20.3"
+]
+
+[project.urls]
+homepage = "https://github.com/gizmo84/zeebe-grpc-python"
+documentation = "https://github.com/gizmo84/zeebe-grpc-python"
+repository = "https://github.com/gizmo84/zeebe-grpc-python"

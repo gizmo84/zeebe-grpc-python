@@ -4,6 +4,6 @@ venv
 build
 dist
 *.egg-info
-zeebe_grpc/gateway_pb2.py
-zeebe_grpc/gateway_pb2_grpc.py
-zeebe_grpc/gateway.proto
+src/zeebe_grpc/gateway_pb2.py
+src/zeebe_grpc/gateway_pb2_grpc.py
+src/zeebe_grpc/gateway.proto
